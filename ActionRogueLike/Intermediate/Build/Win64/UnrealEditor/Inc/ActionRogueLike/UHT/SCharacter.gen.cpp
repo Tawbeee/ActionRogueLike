@@ -12,6 +12,8 @@ void EmptyLinkFunctionForGeneratedCodeSCharacter() {}
 	ACTIONROGUELIKE_API UClass* Z_Construct_UClass_ASCharacter();
 	ACTIONROGUELIKE_API UClass* Z_Construct_UClass_ASCharacter_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
+	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_ActionRogueLike();
 // End Cross Module References
 	void ASCharacter::StaticRegisterNativesASCharacter()
@@ -28,6 +30,15 @@ void EmptyLinkFunctionForGeneratedCodeSCharacter() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpringArmComp_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_SpringArmComp;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CameraComp_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraComp;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
 	};
@@ -43,6 +54,26 @@ void EmptyLinkFunctionForGeneratedCodeSCharacter() {}
 		{ "ModuleRelativePath", "Public/SCharacter.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASCharacter_Statics::NewProp_SpringArmComp_MetaData[] = {
+		{ "Category", "SCharacter" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/SCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASCharacter_Statics::NewProp_SpringArmComp = { "SpringArmComp", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASCharacter, SpringArmComp), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASCharacter_Statics::NewProp_SpringArmComp_MetaData), Z_Construct_UClass_ASCharacter_Statics::NewProp_SpringArmComp_MetaData) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASCharacter_Statics::NewProp_CameraComp_MetaData[] = {
+		{ "Category", "SCharacter" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/SCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASCharacter_Statics::NewProp_CameraComp = { "CameraComp", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASCharacter, CameraComp), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASCharacter_Statics::NewProp_CameraComp_MetaData), Z_Construct_UClass_ASCharacter_Statics::NewProp_CameraComp_MetaData) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASCharacter_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASCharacter_Statics::NewProp_SpringArmComp,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASCharacter_Statics::NewProp_CameraComp,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASCharacter>::IsAbstract,
 	};
@@ -52,15 +83,16 @@ void EmptyLinkFunctionForGeneratedCodeSCharacter() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_ASCharacter_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_ASCharacter_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ASCharacter_Statics::Class_MetaDataParams), Z_Construct_UClass_ASCharacter_Statics::Class_MetaDataParams)
 	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASCharacter_Statics::PropPointers) < 2048);
 	UClass* Z_Construct_UClass_ASCharacter()
 	{
 		if (!Z_Registration_Info_UClass_ASCharacter.OuterSingleton)
@@ -80,9 +112,9 @@ void EmptyLinkFunctionForGeneratedCodeSCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Projects_GitHub_ActionRogueLike_ActionRogueLike_Source_ActionRogueLike_Public_SCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASCharacter, ASCharacter::StaticClass, TEXT("ASCharacter"), &Z_Registration_Info_UClass_ASCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASCharacter), 1493221845U) },
+		{ Z_Construct_UClass_ASCharacter, ASCharacter::StaticClass, TEXT("ASCharacter"), &Z_Registration_Info_UClass_ASCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASCharacter), 2755423045U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Projects_GitHub_ActionRogueLike_ActionRogueLike_Source_ActionRogueLike_Public_SCharacter_h_3748121108(TEXT("/Script/ActionRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Projects_GitHub_ActionRogueLike_ActionRogueLike_Source_ActionRogueLike_Public_SCharacter_h_872802885(TEXT("/Script/ActionRogueLike"),
 		Z_CompiledInDeferFile_FID_Projects_GitHub_ActionRogueLike_ActionRogueLike_Source_ActionRogueLike_Public_SCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Projects_GitHub_ActionRogueLike_ActionRogueLike_Source_ActionRogueLike_Public_SCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

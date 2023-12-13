@@ -1,0 +1,1 @@
+#include "C:/Projects/GitHub/ActionRogueLike/ActionRogueLike/Source/ActionRogueLike/Public/SCharacter.h"
